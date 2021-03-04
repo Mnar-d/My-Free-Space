@@ -1,0 +1,29 @@
+<head>
+     <title>Favorite Page</title>
+</head>
+<body>
+    <h3>My Favorite List</h3>
+    <!-- start from hare  -->
+
+<div class="home__main">
+    <% for( let i = 0; i <user.favorits.length; i++ ) { %>
+        <div class="home__main__twitt">
+            <div class="home__main__twitt--img">
+                <img src=" <%=user.favorits[i].image%>"
+                    alt="">
+            </div>
+        
+            <div class="home__main__twitt__right">
+                <h4 class="home__main__twitt__right--h4">
+                    <%=user.favorits[i].name%> <span> @<%=user.favorits[i].username%></span> 
+                </h4>
+                <div class="profile__about--follow-2">
+                    
+                </div>
+            </div>
+        </div>
+    <% } %>
+    
+    </div>
+    
+</body>

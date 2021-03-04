@@ -1,0 +1,29 @@
+
+<head>
+    <link rel="stylesheet" href="css/post.css">
+        <title>New Post Page</title>
+</head>
+<!--    type:String,
+        title:String, 
+        content:String, -->
+<br>
+<form action="/newPost"  method="POST">
+    <h2> New Post </h2>
+    <label for="Topic">Topic:</label>
+    <input name="title" type="text" placeholder="Topic Type">
+    <select name="type" id="type">
+        <option value="Article">Article</option>
+        <option value="Notes">Notes</option>
+        <option value="Experience">Experience</option>
+        <option value="Story">Story</option>
+
+    </select>
+    <br>
+    <textarea name="content" class="form__input__text" placeholder="TYPE YOUR POST HERE ..."></textarea>
+    <input type="submit" value="post" class=" btn btn-primary">
+</form>
+
+<br>
+<!-- <a href="/profile">Profile</a> -->
+<br>
+<a href="/home">Return to Home </a>

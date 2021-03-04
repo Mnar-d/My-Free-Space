@@ -1,0 +1,454 @@
+body {
+     height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr .5fr 1fr ;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr ;
+    /* margin: 2em; */
+
+    /* justify-content: space-between; -> the space between boxes*/
+}
+.home{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* background-color: thistle; */
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+}
+.home a:hover{
+    color: yellowgreen;
+}
+.home a{
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+.about{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* background-color:wheat; */
+    text-align: center;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    padding: 5px;
+}
+.about a{
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+.about a:hover{
+    color: yellowgreen;
+}
+.logout{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* background-color:gray; */
+    text-align: center;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    padding: 5px;
+}
+.logout a{
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+    font-size: 20px; 
+}
+.logout a:hover{
+    color: yellowgreen;
+}
+.header {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: plum; */
+    text-align: center;
+    font-family:initial;
+    font-size: 45px;
+    color:rgb(131, 114, 122);
+}
+/* .header h2:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(131, 114, 122);
+} */
+.img-edit{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-self: center;
+    justify-self: end;
+    /* background-color: yellowgreen; */
+}
+.editBtn {
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+    font-size: 20px;
+    border: 2px solid rgb(131, 114, 122);
+    box-shadow: 5px 10px #888888 ;
+}
+.editBtn:hover {
+    color: yellowgreen;
+}
+
+.img-edit button{
+    background-color: transparent;
+}
+.img-edit button:hover{
+    color: yellowgreen;
+}
+/* .edit{
+    padding-top:5px ;
+} */
+.img{
+    padding-left: 5px;
+    padding-top: 4px;
+}
+.newBtn{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color:transparent ;
+    font-size: 20px;
+    border: none;
+    align-self:end;
+    justify-self: center;
+    font-weight: bold;
+
+}
+.newBtn a{
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+    font-weight: bold;
+}
+.newBtn a:hover{
+    color: yellowgreen;
+}
+.followingBtn{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color:transparent ;
+    font-size: 20px;
+    border: none;
+}
+.followingBtn a{
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+}
+.followingBtn a:hover{
+    color: yellowgreen;
+}
+
+.followersBtn{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color:transparent ;
+    font-size: 20px;
+    border: none;    
+}
+.followersBtn a{
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+}
+.followersBtn a:hover{
+    color: yellowgreen;
+}
+.collapsible1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: rgb(131, 114, 122);
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    justify-self: end;
+    align-self: center;
+}
+.collapsible1 button{
+    background-color: none;
+    border: none;
+}
+.collapsible1 a{
+    text-decoration: none;
+    color:rgb(131, 114, 122);
+    margin-top: 5px;
+   
+}
+.collapsible1 a:hover{
+    color: yellowgreen;
+  }
+.collapsible2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    color:rgb(131, 114, 122);
+    border-bottom: 1px solid black;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.collapsible2 a:hover{
+  color: yellowgreen;
+}
+
+.collapsible2 button{
+    background-color: transparent;
+    border: none;
+}
+.collapsible2 a{
+    border: none;
+    text-decoration: none;
+    color:rgb(131, 114, 122) ;
+}
+.collapsible3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    color:rgb(131, 114, 122);
+    border-bottom: 1px solid black;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.collapsible3 a:hover{
+  color: yellowgreen;
+}
+
+.collapsible3 button{
+    background-color: transparent;
+    border: none;
+}
+.collapsible3 a{
+    border: none;
+    text-decoration: none;
+    color:rgb(131, 114, 122) ;
+}
+  .footer{
+      /* background-color: rgb(144, 113, 119); */
+      /* grid-column-start: 1;
+      grid-column-end: 6;
+      grid-row-start: 6;
+      grid-row-end: 7; */
+      display:flex;
+      position: fixed;
+      top: 840px;
+      padding: 20px;
+      margin-left: 500px;
+      word-spacing: 10px;
+      width: 100%;
+      height: 100%;
+      align-self: end;
+      margin-bottom: 0;
+      color: rgb(254, 231, 199);
+      
+  }
+  .footer a:hover{
+    color: yellowgreen;
+  }
+  .footer a{
+    color: rgb(254, 231, 199);
+    text-decoration: none
+  }
+  .footer p{
+    color: rgb(254, 231, 199);
+    text-decoration: none
+  }
+  .footer1{
+    /* background-color: rgb(144, 113, 119); */
+    /* grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7; */
+    display:flex;
+    position: fixed;
+    top: 840px;
+    padding: 20px;
+    margin-left: 500px;
+    word-spacing: 10px;
+    width: 100%;
+    height: 100%;
+    align-self: end;
+    margin-bottom: 0;
+    color: black;
+}
+.footer1 a:hover{
+  color: yellowgreen;
+}
+.footer1 a{
+  color: black;
+  text-decoration: none
+}
+.footer1 p{
+  color: rgb(254, 231, 199);
+  text-decoration: none
+}
+.welcome{
+    display: none;
+    position:fixed; 
+    top : 0px;
+    left : 0px;
+    right: 0px; 
+    bottom: 0px;
+    background-color: rgb(144, 113, 119, .9);
+    text-align: center;
+    color: white;
+    margin: 80px;
+    font-size: 30px;
+
+}
+.welcome button{
+    color: black;
+    font-size:30px ;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .25em .25em;
+    margin: 5px;
+    cursor: pointer;
+}
+.h2 {
+    margin-top: 300px;
+}
+.welcome button:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.collapsible1 button:hover{
+    color:white;
+}
+
+/* ======== Publication ======= */
+
+.publications{
+    color: rgb(131, 114, 122);
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+/* =====about ===== */
+.aboutHeader{
+    color: rgb(131, 114, 122);
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+/* read more  */
+
+.readMore{
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+
+}
+.readMore--img{
+    margin: 10px ;
+
+}
+.readMore--img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: auto;
+    
+}
+.readMore__right{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.readMore__right span{
+    color: rgba(0, 0, 0, 0.596);
+}
+
+.readMore--icons img{
+    width: 16px;
+    height: 16px;
+    margin-right: 50px;
+    filter: invert(13%) sepia(0%) saturate(4091%) hue-rotate(345deg) brightness(94%) contrast(78%);
+}
+
+
+.readMore__top{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+.readMore__top img{
+    height: 100px;
+    width: 100px;
+}
+.readMore__top__left{
+    text-align: center;
+}
+.readMore__top__left img {
+    height: 70px;
+    width: 70px;
+    margin-left: 5px;
+    border-radius: 100%;
+    /* border: solid black; */
+    }
+.readMore__top__right img {
+    height: 41px;
+    width: 50px;
+    margin: 4px;
+    
+    
+}
+
+.readMoreTextArea{
+background: wheat;
+margin: 10px;
+width: 100%;
+height: 50vh;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+
+<head>
+    <title>Edit Page</title>
+</head>
+<body>
+    <h2>Edit Page</h2>
+    <form action="/edit/?_method=put" method="POST">
+
+        <label for="oldPassword">Old Password</label><br>
+        <input type="text" name="oldPassword" id="oldPassword"  placeholder="You must enter the correct old password otherwise it will not updated."/>
+        <br><br>
+        <label for="password">New Password</label><br>
+        <input type="text" name="password" id="password"  placeholder="New Password"/>
+        <br><br>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" value="<%= user.name %>"  />
+        <br><br>
+        <label for="email">email</label><br>
+        <input type="text" name="email" id="email" value="<%= user.email %>" />
+        <br><br>
+        <label for="image">Image</label><br>
+        <input type="text" name="image" id="image" value="<%= user.image %>"  />
+        <br><br>
+        <label for="contact">Contact</label><br>
+        <input type="text" name="contact" id="contact" value="<%= user.contact %>" />
+        <br><br>
+        <label for="twitter">twitter</label><br>
+        <input type="text" name="twitter" id="twitter" value="<%= user.twitter %>" />
+        <br><br>
+        <label for="facebook">Facebook</label><br>
+        <input type="text" name="facebook" id="facebook" value="<%= user.facebook %>" />
+        <br><br>
+        <input type="submit" value="Save" />
+      </form>
+</body>

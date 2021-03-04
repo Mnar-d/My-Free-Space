@@ -1,0 +1,29 @@
+<head>
+    <title>Home page</title>
+</head>
+<body>
+    <h1> Chack Pages </h1>
+    <div>
+       <button> <a href="/login">Login</a> </button>
+        <button> <a href="/signup">Sign UP</a> </button>
+        <button> <a href="/logout">Logout</a> </button>
+        <button> <a href="/addpost">Add Post</a> </button>
+        <button> <a href="/profile">Profile</a> </button>
+        <button> <a href="/followers">Followers</a> </button>
+        <button> <a href="/follwing">Follwing</a> </button>
+    </div>
+    <hr>
+    <br>
+    <h3>LIST OF USER</h3>
+    <hr>
+    <br>
+    <!-- users from server "/" -->
+      <% for (var i=0; i<users.length; i++){ %>
+
+        <br><br> <%= users[i]%> <br><br><hr>
+
+          <% } %>
+
+    <p class="intro">Feel free to express yourself, ideas and thoughts. Remember always to think positively and train your mind to see the good in every situation.
+    </p>
+</body>

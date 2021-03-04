@@ -1,0 +1,39 @@
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Followings Page</title> 
+</head>
+
+
+<div class="home__top">
+    <div class="home__top__left">
+        <img src="https://image.shutterstock.com/image-vector/arab-man-portrait-260nw-409360072.jpg" alt="" srcset="">
+        <a href="/profile"><p> <%=user.username%> Profile </p></a>
+    </div>
+    <div class="home__main__post__right">
+        <h4>Followings Page</h4>
+    </div>
+    
+</div>
+<div class="home__main">
+    <!-- start of one follow -->
+    <% user.followings.forEach((user) => { %> 
+        <!-- mnar-d -> followings -> -->
+        <%user.followings.reverse()%>
+            <div class="home__main__post">
+                <div class="home__main__post--img">
+                    <img <% if (user.image == '' || user.image == null ){ %>
+                        src="https://image.shutterstock.com/image-vector/arab-man-portrait-260nw-409360072.jpg" 
+                        <% }else{ %>
+                        src="<%=user.image%>" 
+                        <% }%> >
+                </div>
+                <div class="home__main__post__right">
+                    <h4 class="home__main__post__right--h4">
+                        <%=user.name%> <span> @<%=user.username%></span>
+                    </h4>
+                </div>
+            </div>
+            <!-- end of one follow -->
+    <% }) %>
+</div>

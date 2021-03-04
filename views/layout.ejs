@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/myFreeSpace.ico" />
+        <title>Home Page</title>
+       <link rel="stylesheet" href="css/css.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      </head>
+<body style="background: rgb(247, 234, 215);"> 
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">My Free Space</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home">
+              <i class="fa fa-home"></i>
+              Home
+              </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/about">
+              <i class="fa fa-home"></i>
+              About Us
+              </a>
+          </li>
+        </ul>
+        <div class="home__top__right search-bar">
+        <form class="form-inline my-2 my-lg-0" action="/layout" method="POST">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="name">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search</button>
+        </form>
+      </div>
+    </nav>
+    <div style="margin: auto; width: 80%; align-content: center;" >
+        <%- body %> 
+      </div>
+    </body>
+    </html>

@@ -1,0 +1,132 @@
+
+/* 
+home__top
+home__top__right
+home__top__center
+home__top__left
+home__main
+home__main__post
+home__main__post--img
+home__main__post__right
+home__main__post__right--h4
+home__main__post__right--p
+*/
+
+.home__top{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+
+}
+.home__top img{
+    height: 100px;
+    width: 100px;
+}
+.home__top__left{
+    text-align: center;
+}
+.home__top__left img {
+    height: 70px;
+    width: 70px;
+    margin-left: 5px;
+    border-radius: 100%;
+    /* border: solid black; */
+    }
+.home__top__right img {
+    height: 41px;
+    width: 50px;
+    margin: 4px;
+}
+
+.home__main{
+    height: calc(100% - 60px);
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* background-color: rgba(0, 0, 255, 0.226); */
+}
+
+.home__main__post{
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+
+}
+.home__main__post--img{
+    margin: 10px ;
+
+}
+.home__main__post--img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: auto;
+    
+}
+.home__main__post__right{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.home__main__post__right span{
+    color: rgba(0, 0, 0, 0.596);
+}
+
+.home__main__post--icons img{
+    width: 16px;
+    height: 16px;
+    margin-right: 50px;
+    filter: invert(13%) sepia(0%) saturate(4091%) hue-rotate(345deg) brightness(94%) contrast(78%);
+}
+.home__main__post--icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    
+}
+
+.search-bar {
+    
+}
+
+.search-bar__submit{
+    margin-right: 70px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(85, 172, 238) ;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+  
+}
+.search-bar__submit:focus, 
+.search-bar__submit:active
+
+{
+    outline:none;
+    padding: 10px;
+    border: none;
+    background-color: rgb(85, 172, 238) ;
+    color: white;
+    border-radius: 15px;
+}
+.search-bar__text {
+    background-color:rgba(85, 172, 238, 0.198); 
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: wheat;
+}
+.search-bar__text:focus{
+    outline:none;
+    background-color:rgba(85, 172, 238, 0.198); 
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: wheat;
+}

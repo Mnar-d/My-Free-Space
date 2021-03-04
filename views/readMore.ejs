@@ -1,0 +1,67 @@
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Read More Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="css/profile.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      ​
+</head>
+<div class="home__top">
+    <div class="home__top__left">
+        <img src="<%=user.image%>" alt="" srcset="">
+        <a href="/profile"><p> <%=user.username%> Profile </p></a>
+    </div>
+    <div class=" home__top__right"> 
+
+    </div>
+</div>
+
+<!-- <div class="readMore__top">
+    <div class="readMore__top__left">
+        <img src="https://image.shutterstock.com/image-vector/arab-man-portrait-260nw-409360072.jpg" alt="" srcset="">
+        <p>user name profile </p>
+       
+    </div>
+</div> -->
+
+<div class="home__main">
+        
+            <div class="readMore">
+                
+    
+                <div class="readMore__right">
+                    <h4 class="readMore__right--h4">
+                        <span> Author: </span> <%=user.name%> 
+                    </h4>
+                </div>
+            </div>
+</div>
+<!-- user,postId,author:postUser,loggedUser -->
+<div class="card">
+    <% user.posts.forEach(post=>{ %>
+        <% if(post._id == postId){ %>
+    <div class="row no-gutters row-bordered">
+      <div class="d-flex col-md align-items-center">
+        <a href="/followers" class="card-body d-block text-body">
+          <div class="text-muted small line-height-1">Type : <%=post.type %> </div>
+          <div class="text-xlarge">Title : <%= post.title %> </div>
+        </a>
+      </div>
+    </div>
+    <hr class="border-light m-0">
+    <div class="card-body">
+      <h6 class="mt-4 mb-3"><%= post.content %></h6>
+    </div>
+
+    <%if (author == loggedUser){%>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/editPost?id=<%=user._id%>&postId=<%=post._id%>">Edit Post</a>
+        <% }%>
+
+    <% } %>
+    <%}) %>
+  </div>

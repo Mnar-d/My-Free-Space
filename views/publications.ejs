@@ -1,0 +1,30 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css.css">
+  <title>Publications Page</title>
+</head>
+
+<body>
+  <header>
+    <h3 class="publications">Publications</h3>
+    <br>
+  </header>
+  <main>
+    <ul>
+      <% user.posts.forEach(post=>{ %>
+
+      <li> 
+      Type :  <%=post.type %> </li>
+      <ul>
+      <li>  Title : <%= post.title %> </li> 
+  
+      <a href="/readMore?id=<%=user._id%>&postId=<%=post._id%>">read more</a>
+      <hr>
+    </ul>
+      <% }) %>
+    </ul>
+
+  </main>
+
+</body>

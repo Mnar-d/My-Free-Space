@@ -1,0 +1,91 @@
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Home Page</title>
+</head>
+
+
+<div class="home__top">
+    <div class="home__top__left">
+        <img src="<%=user.image%>" alt="" srcset="">
+        <a href="/profile"><p> <%=user.name%> Profile </p></a>
+    </div>
+    <div class=" home__top__right"> 
+        <a href="/profile">
+            <button class="newBtn"> <a class="newColor" href="/newPost">  New Post</a> </button> <br>
+    </a>
+       
+    </div>
+</div>
+
+<div class="home__main">
+    <!-- followings posts -->
+<h4 class="home__main__twitt__right--h4">
+                    
+                </h4>
+    <!-- start of one post -->
+    <% user.followings.forEach((user) => { %>
+        <%user.posts.reverse()%>
+        <% user.posts.forEach((post) => { %>
+            <div class="home__main__post">
+                <div class="home__main__post--img">
+                    
+                        <a href="/otherProfile?id=<%=user._id%>"> <img src="<%=user.image%>"alt=""> </a>
+                </div>
+    
+                <div class="home__main__post__right">
+                    <h4 class="home__main__post__right--h4">
+                        <%=user.name%> <br><span class="home__main__post__right--h4 small"> @<%=user.username%></span> 
+                    </h4>
+                    <p class="home__main__post__right--p">
+                        Type : <%=post.type%> <br>
+                        Title : <%=post.title%>
+                    </p>
+                    <div class="home__main__post--icons">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/535/535285.svg" alt="" srcset="">
+                        <img src="https://image.flaticon.com/icons/png/512/3580/3580085.png" alt="" srcset="">
+                        <a href="/readMore?id=<%=user._id%>&postId=<%=post._id%>">read more</a> <!-- new page for post -->
+                    </div>
+                </div>
+            </div>
+            <!-- end of one post -->
+        <% }) %>
+    <% }) %>
+<!-- my posts -->
+    <%user.posts.reverse()%>
+    <% user.posts.forEach((post) => { %>
+        
+        <div class="home__main__post">
+            <div class="home__main__post--img">
+               <img src="https://image.shutterstock.com/image-vector/arab-man-portrait-260nw-409360072.jpg" alt="<%=user.name%>"/>
+               
+            </div>
+            <div class="home__main__post__right">
+                <h4 class="home__main__post__right--h4">
+                    <%=user.name%> <span> @<%= user.username%></span>  <span>   </span>
+                </h4>
+                <p class="home__main__post__right--p">
+                    Type : <%=post.type%> <br>
+                    Title : <%=post.title%>
+                </p>
+                <div class="home__main__post--icons">
+                   
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/535/535285.svg" alt="" srcset="">
+                    <img src="https://image.flaticon.com/icons/png/512/3580/3580085.png" alt="" srcset="">
+                    <a href="/readMore?id=<%=user._id%>&postId=<%=post._id%>">read more</a><!-- new page for post -->
+                </div>
+            </div>
+        </div>
+        <!-- end of one post -->
+    <% }) %>
+    <!-- footer -->
+    <div class="footer1">
+        <img  src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt=""
+        width="30" height="30"> 
+      <a  href="<%= user.twitter %>">twitter | </a>
+      <img src=" https://i.pinimg.com/564x/30/99/af/3099aff4115ee20f43e3cdad04f59c48.jpg" alt="" width="30" height="30">
+      <a href="<%= user.facebook %> "> facebook | </a>
+        Contact <%= user.contact %>
+      </div> 
+    
+</div>
